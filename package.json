@@ -1,0 +1,14 @@
+{
+  "name": "simple-transfer-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "create-react-app": "^5.0.1",
+    "crypto-browserify": "^3.12.0",
+    "express": "^4.17.1",
+    "web3": "^1.6.0"
+  }
+}

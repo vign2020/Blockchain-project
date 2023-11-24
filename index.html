@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Ethers.js</title>
+    
+</head>
+<style>
+    body{
+         background-image: url('./images/background2.jpg');
+        background-color: rgb(92, 74, 74); 
+        
+        background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    }
+         #cardContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minimum and maximum width as needed */
+            gap: 10px;
+            color : white;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            word-wrap: break-word;
+        }
+
+        .card {
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            padding: 10px;
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+            color :white
+            /* display:flex ; */
+            
+        }
+        button{
+            background-color: orange; /* Green background color */
+    border: none; /* Remove borders */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add some padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* Optional: Add rounded corners */
+        }
+        button:hover{
+            background-color: rgb(113, 73, 0) /* Darker green on hover */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+
+    
+</style>
+
+<body>
+    <!-- <button onclick="connectMetamask()">connect</button>
+    <button onclick="getBalance()">getBalance</button>
+    <button onclick="readDataFromSmartContract()">readDataFromSmartContract</button>
+    <br/>
+    <button onclick="sendUsdtToAccount()">sendUsdtToAccount</button> -->
+        <h1>Make donations on the blockchain and saves lives!!!</h1>
+    <div id="cardContainer"></div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="balanceOutput"></p>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal2()">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+  
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+        <script src="app2.js"></script>
+    
+</body>
+</html>
